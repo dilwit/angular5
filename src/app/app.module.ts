@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ToDoComponent } from './to-do/to-do.component';
+import { FooterComponent } from './footer/footer.component';
+import { ToDoDetailComponent } from './to-do/to-do-detail/to-do-detail.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ToDoComponent } from './to-do/to-do.component';
     AppComponent,
     AboutComponent,
     ContactUsComponent,
-    ToDoComponent
+    ToDoComponent,
+    FooterComponent,
+    ToDoDetailComponent
   ],
   imports: [
     BrowserModule,

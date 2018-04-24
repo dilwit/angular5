@@ -12,13 +12,14 @@
 	    <p class="sm">form to add new?</p>
 
 	    <form>
-	      <input type="text" class="txt" name="item" placeholder="{{placeHolderText}}" [(ngModel)] = "toDoItem">
-	      <input type="submit" class="btn" [value]="submitText" (click)="addItem()">
+	    	<input type="text" class="txt" name="item" placeholder="priorityId" [(ngModel)] = "toDoItem.id">
+	      	<input type="text" class="txt" name="item" placeholder="{{placeHolderText}}" [(ngModel)] = "toDoItem.name">
+	      	<input type="submit" class="btn" [value]="submitText" (click)="addItem()">
 	    </form>
-	 </div>
-  	<div class="col">
+	</div>
+  	<div class="col" *ngIf="toDoList?.length > 0">
     	<p class="life-container" *ngFor="let td of toDoList">
-      		{{td}}
+      		<app-to-do-detail [todo]="td"></app-to-do-detail>
     	</p>
-  </div>
+  	</div>
 </div>

@@ -10,10 +10,13 @@ export class ToDoComponent implements OnInit {
   // One way data-binding
   placeHolderText: string = "Go to gym tomorrow...";
   submitText: string = "Add Item";
-  toDoList: string = [];
+  toDoList: any = [];
 
   // Two way data-binding
-  toDoItem: string;
+  toDoItem: any = {
+    id: null,
+    name: null
+  };
 
   constructor() { }
 
@@ -21,8 +24,14 @@ export class ToDoComponent implements OnInit {
   }
 
   addItem() {
+  	if(!this.toDoItem || !this.toDoItem.name)
+  		return;
+  	
   	this.toDoList.push(this.toDoItem);
-  	this.toDoItem = null;
+  	this.toDoItem = {
+      id: null,
+      name: null
+    };
   }
 
 }

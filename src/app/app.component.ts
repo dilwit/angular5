@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first angular 5 app';
+
+  constructor(private router: Router) {
+
+  }
+
+  navigateToDo() {
+  	this.router.navigate(['todo']);
+  }
+
+  navigateContactUs() {
+  	this.router.navigate(['/contactUs', 'showMeYourOfficeAddress']);
+  }
 }
