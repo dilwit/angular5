@@ -9,8 +9,20 @@ const routes: Routes = [
 		component: ToDoComponent
 	},
 	{
-		path: 'contactUs/:type',
-		component: ContactUsComponent
+		path: 'contactUs',
+		component: ContactUsComponent,
+		data: {
+			param1: 'default1',
+			param2: 'default2'
+		}
+	},
+	{
+		path: 'contactUs/:urlParam1/:urlParam2',
+		component: ContactUsComponent,
+		data: {
+			param1: 'default1',
+			param2: 'default2'
+		}
 	}
 ];
 

@@ -8,14 +8,25 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ContactUsComponent implements OnInit {
 
-  type: string;	
+  urlParam1: string;	
+  urlParam2: string;
+  queryParam1: string;
+  optionalParam1: string;  
+  routeData: any;
 
   constructor(private route: ActivatedRoute) { 
 
   }
 
   ngOnInit() {
-  	this.route.params.subscribe(res => this.type = res.type);
+  	this.urlParam1 = this.route.snapshot.paramMap.get('urlParam1');
+  	this.urlParam2 = this.route.snapshot.paramMap.get('urlParam2');
+
+	this.optionalParam1 = this.route.snapshot.paramMap.get('optionalParam1');
+
+  	this.queryParam1 = this.route.snapshot.queryParamMap.get('queryParam1');
+
+  	this.route.data.subscribe( d => this.routeData = d);
   }
 
 }

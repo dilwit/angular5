@@ -1,5 +1,15 @@
 <p>
   contact-us works!
-  <br>
-  Following params are passed - {{type}}
+  <span *ngIf="routeData">
+  	<br>Data in routing - {{routeData.param1}}, {{routeData.param2}}
+  </span>
+  <span *ngIf="urlParam1 || urlParam2">
+  	<br>Required url params - {{urlParam1}}, {{urlParam2}}
+  </span>
+  <span *ngIf="queryParam1">
+  	<br>Query params - {{queryParam1}}
+  </span> 
+  <span *ngIf="optionalParam1">
+  	<br>Optional params - {{optionalParam1}}
+  </span>
 </p>

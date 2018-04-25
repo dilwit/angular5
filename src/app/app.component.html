@@ -6,24 +6,26 @@
 </div>
 
 <h4>Following are other angular component via Router Links</h4>
-<ul>
-  <li>
-    <h4><a routerLink="todo">To Do</a></h4>
-  </li>
-  <li>
-    <h4><a routerLink="contactUs/showMeYourHomeAddress">Contact Us</a></h4>
-  </li>
-</ul>
+<input type="button" value="ToDo" (click)="navigateToDo()">
+<a routerLink="/todo">To Do</a>
 
-<h4>Following are other angular component via prgramatic Router Navigation</h4>
-<ul>
-  <li>
-    <input type="button" class="btn" value="ToDo" (click)="navigateToDo()">
-  </li>
-  <li>
-    <input type="button" class="btn" value="ContactUs" (click)="navigateContactUs()">
-  </li>
-</ul>
+<p>Default routing data</p>
+<input type="button" value="ContactUs" (click)="contactUsWithDefaultRouteData()">
+<a routerLink="/contactUs">Contact Us</a>
+<!-- <input type="button" value="ContactUs - Override" (click)="contactUsWithOverridingDefaultRouteData()">
+<a routerLink="/contactUs">Contact Us - Override</a> -->
+
+<p>Required url params (and with default routing data)</p>
+<input type="button" value="ContactUs" (click)="contactUsWithRequiredUrlParamsAndDefaultRouteData()">
+<a routerLink="/contactUs/showMeYourHomeAddress/old">Contact Us</a>
+
+<p>Query params (and with default routing data)</p>
+<input type="button" value="ContactUs" (click)="contactUsWithQueryParams()">
+<a [routerLink]="['/contactUs']" [queryParams]="{queryParam1: 'queryParamData'}">Contact Us</a>
+
+<p>Optional params (and with default routing data)</p>
+<input type="button" value="ContactUs" (click)="contactUsWithOptionalParams()">
+<a [routerLink]="['/contactUs', {optionalParam1: 'optionalParamData'}]">Contact Us</a>
 
 <h4> router-outlet where angular injects content of a new route, which starts from line below.</h4>
 <p>Click any of above links or buttons</p>
