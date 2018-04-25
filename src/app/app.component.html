@@ -1,31 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to angular root component
+    Welcome to angular (app-root) component
   </h1>
 </div>
+<h4> Includes app-header component </h4>
+<app-header></app-header>
 
 <h4>Following are other angular component via Router Links</h4>
-<input type="button" value="ToDo" (click)="navigateToDo()">
-<a routerLink="/todo">To Do</a>
-
-<p>Default routing data</p>
-<input type="button" value="ContactUs" (click)="contactUsWithDefaultRouteData()">
-<a routerLink="/contactUs">Contact Us</a>
-<!-- <input type="button" value="ContactUs - Override" (click)="contactUsWithOverridingDefaultRouteData()">
-<a routerLink="/contactUs">Contact Us - Override</a> -->
-
-<p>Required url params (and with default routing data)</p>
-<input type="button" value="ContactUs" (click)="contactUsWithRequiredUrlParamsAndDefaultRouteData()">
-<a routerLink="/contactUs/showMeYourHomeAddress/old">Contact Us</a>
-
-<p>Query params (and with default routing data)</p>
-<input type="button" value="ContactUs" (click)="contactUsWithQueryParams()">
-<a [routerLink]="['/contactUs']" [queryParams]="{queryParam1: 'queryParamData'}">Contact Us</a>
-
-<p>Optional params (and with default routing data)</p>
-<input type="button" value="ContactUs" (click)="contactUsWithOptionalParams()">
-<a [routerLink]="['/contactUs', {optionalParam1: 'optionalParamData'}]">Contact Us</a>
+<table border="1">
+  <tr>
+      <td>
+        <input type="button" value="ToDo" (click)="navigateToDo()">
+        <a routerLink="/todo">To Do</a>
+      </td>
+      <td>
+        <p>Default routing data</p>
+        <input type="button" value="ContactUs" (click)="contactUsWithDefaultRouteData()">
+        <a routerLink="/contactUs">Contact Us</a>
+        <!-- <input type="button" value="ContactUs - Override" (click)="contactUsWithOverridingDefaultRouteData()">
+        <a routerLink="/contactUs">Contact Us - Override</a> -->
+      </td>
+      <td>
+        <p>Required url params (and with default routing data)</p>
+        <input type="button" value="ContactUs" (click)="contactUsWithRequiredUrlParamsAndDefaultRouteData()">
+        <a routerLink="/contactUs/showMeYourHomeAddress/old">Contact Us</a>
+      </td>
+      <td>
+        <p>Query params (and with default routing data)</p>
+        <input type="button" value="ContactUs" (click)="contactUsWithQueryParams()">
+        <a [routerLink]="['/contactUs']" [queryParams]="{queryParam1: 'queryParamData'}">Contact Us</a>
+      </td>
+      <td>
+        <p>Optional params (and with default routing data)</p>
+        <input type="button" value="ContactUs" (click)="contactUsWithOptionalParams()">
+        <a [routerLink]="['/contactUs', {optionalParam1: 'optionalParamData'}]">Contact Us</a>
+      </td>
+  </tr>
+</table>
 
 <h4> router-outlet where angular injects content of a new route, which starts from line below.</h4>
 <p>Click any of above links or buttons</p>

@@ -12,6 +12,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ToDoDetailComponent } from './to-do/to-do-detail/to-do-detail.component';
 
 
+import { DataService } from './data.service';
+import { HeaderComponent } from './header/header.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +23,15 @@ import { ToDoDetailComponent } from './to-do/to-do-detail/to-do-detail.component
     ContactUsComponent,
     ToDoComponent,
     FooterComponent,
-    ToDoDetailComponent
+    ToDoDetailComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
